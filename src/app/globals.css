@@ -1,0 +1,104 @@
+@import "tailwindcss";
+
+@theme {
+    /* Colors */
+    --color-navy: rgb(5, 13, 26);
+    --color-navy-2: rgb(10, 25, 47);
+    --color-navy-3: rgb(17, 34, 64);
+    --color-blue: rgb(59, 130, 246);
+    --color-blue-bright: rgb(96, 165, 250);
+    --color-blue-deep: rgb(29, 78, 216);
+    --color-cyan: rgb(34, 211, 238);
+    --color-text: rgb(148, 163, 184);
+
+    /* Font Family */
+    --font-family-mono: var(--font-jetbrains-mono), monospace;
+
+    /* Animation */
+    --animate-pulse: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+
+    /* Keyframes */
+    @keyframes pulse {
+        0%,
+        100% {
+            opacity: 1;
+        }
+        50% {
+            opacity: 0.5;
+        }
+    }
+}
+
+:root {
+    --navy: rgb(5, 13, 26);
+    --navy-2: rgb(10, 25, 47);
+    --navy-3: rgb(17, 34, 64);
+    --blue: rgb(59, 130, 246);
+    --blue-bright: rgb(96, 165, 250);
+    --blue-deep: rgb(29, 78, 216);
+    --cyan: rgb(34, 211, 238);
+    --white: rgb(241, 245, 249);
+    --text: rgb(148, 163, 184);
+    --border: rgba(59, 130, 246, 0.18);
+}
+
+* {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--navy);
+    color: var(--text);
+    cursor: none;
+    overflow-x: hidden;
+}
+
+@media (max-width: 768px) {
+    body {
+        cursor: auto;
+    }
+}
+
+::-webkit-scrollbar {
+    width: 4px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--navy-2);
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, var(--blue), var(--cyan));
+    border-radius: 2px;
+}
+
+@keyframes pulseGreen {
+    0%,
+    100% {
+        box-shadow: 0 0 0 0 rgba(52, 211, 153, 0.5);
+        opacity: 1;
+    }
+    50% {
+        box-shadow: 0 0 0 6px rgba(52, 211, 153, 0);
+        opacity: 0.8;
+    }
+}
+
+@keyframes blinkCaret {
+    0%,
+    100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+}
+
+.animate-blink {
+    animation: blinkCaret 0.75s step-end infinite;
+}
