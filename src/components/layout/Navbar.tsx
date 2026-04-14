@@ -1,36 +1,35 @@
-'use client'
+"use client";
 
-import { useState, useEffect } from 'react'
-import { motion } from 'framer-motion'
-import { cn } from '@/lib/cn'
+import { useState, useEffect } from "react";
+import { motion } from "framer-motion";
+import { cn } from "@/lib/cn";
 
 const navItems = [
-  { label: 'Sobre', href: '#sobre' },
-  { label: 'Experiência', href: '#experiencia' },
-  { label: 'Tecnologias', href: '#tecnologias' },
-  { label: 'Contato', href: '#contato' },
-]
+  { label: "Sobre", href: "#sobre" },
+  { label: "Experiência", href: "#experiencia" },
+  { label: "Tecnologias", href: "#tecnologias" },
+];
 
 export function Navbar() {
-  const [isScrolled, setIsScrolled] = useState(false)
-  const [activeSection, setActiveSection] = useState('hero')
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [activeSection, setActiveSection] = useState("hero");
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50)
-    }
+      setIsScrolled(window.scrollY > 50);
+    };
 
-    window.addEventListener('scroll', handleScroll)
-    return () => window.removeEventListener('scroll', handleScroll)
-  }, [])
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
     <motion.nav
       className={cn(
-        'fixed top-0 left-0 right-0 z-50 transition-all duration-300',
+        "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
         isScrolled
-          ? 'bg-navy-2/80 backdrop-blur-md border-b border-blue/10'
-          : 'bg-transparent'
+          ? "bg-navy-2/80 backdrop-blur-md border-b border-blue/10"
+          : "bg-transparent",
       )}
       initial={{ y: -100 }}
       animate={{ y: 0 }}
@@ -56,10 +55,10 @@ export function Navbar() {
             href="#contato"
             className="ml-4 px-4 py-2 text-sm font-mono bg-blue/10 text-blue-bright border border-blue/30 rounded hover:bg-blue/20 transition-colors duration-200"
           >
-            contato()
+            Contato()
           </a>
         </div>
       </div>
     </motion.nav>
-  )
+  );
 }
