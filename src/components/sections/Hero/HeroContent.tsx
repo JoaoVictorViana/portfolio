@@ -1,18 +1,18 @@
-'use client'
+"use client";
 
-import { motion } from 'framer-motion'
-import { Badge } from '@/components/ui/Badge'
-import { Button } from '@/components/ui/Button'
-import { HeroStats } from './HeroStats'
-import { useTyping } from '@/hooks/useTyping'
-import { stats } from '@/data/stats'
+import { motion } from "framer-motion";
+import { Badge } from "@/components/ui/Badge";
+import { Button } from "@/components/ui/Button";
+import { HeroStats } from "./HeroStats";
+import { useTyping } from "@/hooks/useTyping";
+import { stats } from "@/data/stats";
 
 const TYPING_PHRASES = [
-  'Senior Full-Stack Developer',
-  'Java · Node.js · React',
-  'TypeScript Specialist',
-  'DevOps & Cloud Explorer',
-]
+  "Senior Full-Stack Developer",
+  "Java · Node.js · React",
+  "TypeScript Specialist",
+  "DevOps & Cloud Explorer",
+];
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -20,15 +20,22 @@ const containerVariants = {
     opacity: 1,
     transition: { staggerChildren: 0.12, delayChildren: 0.2 },
   },
-}
+};
 
 const itemVariants = {
   hidden: { opacity: 0, y: 24 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: [0.16, 1, 0.3, 1] } },
-}
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.6,
+      ease: [0.16, 1, 0.3, 1] as [number, number, number, number],
+    },
+  },
+};
 
 export function HeroContent() {
-  const displayText = useTyping(TYPING_PHRASES)
+  const displayText = useTyping(TYPING_PHRASES);
 
   return (
     <motion.div
@@ -59,7 +66,10 @@ export function HeroContent() {
         </span>
       </motion.h1>
 
-      <motion.div variants={itemVariants} className="h-14 mb-6 flex items-center">
+      <motion.div
+        variants={itemVariants}
+        className="h-14 mb-6 flex items-center"
+      >
         <p className="text-xl md:text-2xl text-blue-bright font-mono">
           {displayText}
           <span className="ml-0.5 inline-block w-0.5 h-[1em] bg-blue-bright align-middle animate-pulse" />
@@ -89,5 +99,5 @@ export function HeroContent() {
         <HeroStats items={stats} />
       </motion.div>
     </motion.div>
-  )
+  );
 }
