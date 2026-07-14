@@ -22,4 +22,11 @@ export const contactItems: ContactItem[] = [
     href: 'https://www.linkedin.com/in/jo%C3%A3o-victor-duarte-158364131',
     icon: 'linkedin',
   },
+  {
+    id: 'github',
+    label: 'GitHub',
+    value: 'JoaoVictorViana',
+    href: 'https://github.com/JoaoVictorViana',
+    icon: 'github',
+  },
 ]
