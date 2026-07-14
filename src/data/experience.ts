@@ -19,7 +19,7 @@ export const experiences: ExperienceItem[] = [
     location: 'Fortaleza, CE',
     description:
       'Atuação em plataformas educacionais e sistemas administrativos complexos. Desenvolvimento de arquitetura de microserviços com RabbitMQ e integração de múltiplas tecnologias.',
-    tags: ['PHP', 'Node.js', 'Next.js', 'RabbitMQ', 'MySQL', 'MongoDB', 'Moodle', 'Liferay'],
+    tags: ['PHP', 'Laravel' ,'Node.js', 'Next.js', 'RabbitMQ', 'MySQL', 'MongoDB', 'Moodle', 'Liferay'],
   },
   {
     id: 'quikdev',
@@ -28,7 +28,7 @@ export const experiences: ExperienceItem[] = [
     period: 'set/2021 - fev/2024',
     description:
       'Desenvolvimento de sistemas imobiliários robustos e plataformas de monitoramento em tempo real. Especializações em TypeScript e React.',
-    tags: ['PHP', 'Zend Framework', 'Next.js', 'TypeScript'],
+    tags: ['PHP', 'Laravel', 'Zend Framework', 'Next.js', 'TypeScript'],
   },
   {
     id: 'sm-places',
