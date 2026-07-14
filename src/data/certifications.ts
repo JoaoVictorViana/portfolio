@@ -2,9 +2,9 @@ import { CertItem } from '@/types'
 
 export const certifications: CertItem[] = [
   {
-    id: 'bacharelado',
-    institution: 'IFCE',
-    credential: 'Bacharelado em Ciência da Computação',
+    id: 'tecnologo',
+    institution: 'UNINASSAU',
+    credential: 'Análise e Desenvolvimento de Sistemas',
   },
   {
     id: 'react-performance',
